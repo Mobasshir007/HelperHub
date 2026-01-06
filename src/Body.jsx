@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import Services from "./Components/Services";
+import Home from "./Components/Home";
+
+
 
 const Body = () => {
   return (
-    <div className='w-full h-screen bg-purple-300'>Body</div>
-  )
-}
+    <div>
+     <Home/>
+     <Services/>
 
-export default Body
+    </div>
+  );
+};
+
+export default Body;
