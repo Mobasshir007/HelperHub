@@ -2,7 +2,7 @@
 .ul-item {
   /* Mobile (default) */
   @apply px-2 py-1.5 text-sm text-gray-700 font-medium cursor-pointer rounded-md
-         bg-amber-300 hover:bg-zinc-700 hover:text-blue-100 transition;
+         hover:bg-zinc-700 hover:text-blue-100 transition;
 
   /* Tablet */
   @apply md:px-3 md:py-2 md:text-base md:rounded-lg;

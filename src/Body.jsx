@@ -8,7 +8,7 @@ const Body = () => {
   return (
     <div>
      <Home/>
-     <Services/>
+    
 
     </div>
   );
