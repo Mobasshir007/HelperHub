@@ -28,7 +28,7 @@ const HowItWorks = () => {
         
         {/* Heading */}
         <div className="text-center mb-14">
-          <h2 className="text-4xl font-bold text-amber-700">
+          <h2 className="text-5xl font-bold text-amber-700">
             How It Works
           </h2>
           <p className="mt-4 text-gray-600 text-lg">

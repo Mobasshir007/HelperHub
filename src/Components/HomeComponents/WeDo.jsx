@@ -29,7 +29,7 @@ const WeDo = () => {
             {WhatWeDo.map((data) => {
               return (
                 <>
-                  <div className="text-xl  py-1">
+                  <div  className="text-xl  py-1">
                     <ul>
                       <li className="font-bold text-cyan-700">🔘 {data}</li>
                     </ul>

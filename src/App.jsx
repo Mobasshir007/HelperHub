@@ -7,6 +7,7 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import HowItWorks from "./Components/HowItWorks";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Workerlist from "./Components/ViewWorker/Workerlist";
 
 function App() {
   const Shouter = createBrowserRouter([
@@ -15,10 +16,22 @@ function App() {
       element: <Layout />,
       children: [
         { index: true, element: <Body /> },
-        { path: "/services", element: <Services /> },
+        {path:"/our-workers",
+              element:<Workerlist/>
+            },
+        { path: "/services", element: <Services /> 
+          
+        },
+         {path:"/services/our-workers",
+              element:<Workerlist/>
+            },
+         {path:"/our-workers",
+              element:<Workerlist/>
+            },
         {path:"/about",element:<About/>},
         {path:"/contact",element:<Contact/>},
-        {path:"/how-it-works",element:<HowItWorks/>}
+        {path:"/how-it-works",element:<HowItWorks/>},
+        
       ],
     },
   ]);

@@ -7,7 +7,7 @@ export const Workers = [
     experience: 5,
     rating: 4.6,
     pricePerHour: 300,
-    city: "Gurugram",
+    city: "Gurugram",   
     image: "https://randomuser.me/api/portraits/men/11.jpg"
   },
   {
@@ -309,7 +309,7 @@ export const Workers = [
   {
     id: 31,
     name: "Imran Khan",
-    skill: "Car Washer",
+    skill :   "Mechanic",
     experience: 4,
     rating: 4.4,
     pricePerHour: 220,
@@ -319,7 +319,7 @@ export const Workers = [
   {
     id: 32,
     name: "Rahul Mehta",
-    skill: "Car Washer",
+    skill: "Mechanic",
     experience: 2,
     rating: 4.1,
     pricePerHour: 200,
@@ -329,7 +329,7 @@ export const Workers = [
   {
     id: 33,
     name: "Salman Ansari",
-    skill: "Car Washer",
+    skill: "Mechanic",
     experience: 6,
     rating: 4.6,
     pricePerHour: 250,
@@ -339,7 +339,7 @@ export const Workers = [
   {
     id: 34,
     name: "Aakash Verma",
-    skill: "Car Washer",
+    skill: "Mechanic",
     experience: 3,
     rating: 4.2,
     pricePerHour: 210,
@@ -349,7 +349,7 @@ export const Workers = [
   {
     id: 35,
     name: "Nadeem Ali",
-    skill: "Car Washer",
+    skill: "Mechanic",
     experience: 7,
     rating: 4.7,
     pricePerHour: 260,
@@ -359,7 +359,7 @@ export const Workers = [
   {
     id: 36,
     name: "Rohit Jain",
-    skill: "Car Washer",
+    skill: "Mechanic",
     experience: 5,
     rating: 4.5,
     pricePerHour: 240,
@@ -369,7 +369,7 @@ export const Workers = [
   {
     id: 37,
     name: "Asif Khan",
-    skill: "Car Washer",
+    skill: "Mechanic",
     experience: 8,
     rating: 4.8,
     pricePerHour: 280,
@@ -379,7 +379,7 @@ export const Workers = [
   {
     id: 38,
     name: "Sahil Gupta",
-    skill: "Car Washer",
+    skill: "Mechanic",
     experience: 4,
     rating: 4.3,
     pricePerHour: 230,
@@ -389,7 +389,7 @@ export const Workers = [
   {
     id: 39,
     name: "Irfan Malik",
-    skill: "Car Washer",
+    skill: "Mechanic",
     experience: 6,
     rating: 4.6,
     pricePerHour: 260,
@@ -399,7 +399,7 @@ export const Workers = [
   {
     id: 40,
     name: "Kunal Bansal",
-    skill: "Car Washer",
+    skill: "Mechanic",
     experience: 3,
     rating: 4.2,
     pricePerHour: 215,
@@ -507,5 +507,68 @@ export const Workers = [
     pricePerHour: 340,
     city: "Noida",
     image: "https://randomuser.me/api/portraits/men/60.jpg"
-  }
+  },
+  {
+  id: 51,
+  name: "Ramesh Verma",
+  skill: "Painter",
+  experience: 8,
+  rating: 4.6,
+  pricePerHour: 350,
+  city: "Gurugram",
+  image: "https://randomuser.me/api/portraits/men/61.jpg"
+},
+{
+  id: 52,
+  name: "Ajay Kumar",
+  skill: "Painter",
+  experience: 5,
+  rating: 4.4,
+  pricePerHour: 300,
+  city: "Noida",
+  image: "https://randomuser.me/api/portraits/men/62.jpg"
+},
+
+{
+  id: 53,
+  name: "Sunita Devi",
+  skill: "Babysitter",
+  experience: 6,
+  rating: 4.8,
+  pricePerHour: 280,
+  city: "Gurugram",
+  image: "https://randomuser.me/api/portraits/women/63.jpg"
+},
+{
+  id: 54,
+  name: "Pooja Sharma",
+  skill: "Babysitter",
+  experience: 4,
+  rating: 4.5,
+  pricePerHour: 250,
+  city: "Noida",
+  image: "https://randomuser.me/api/portraits/women/64.jpg"
+},
+
+{
+  id: 55,
+  name: "Kamal Singh",
+  skill: "House Cleaner",
+  experience: 7,
+  rating: 4.6,
+  pricePerHour: 300,
+  city: "Gurugram",
+  image: "https://randomuser.me/api/portraits/men/65.jpg"
+},
+{
+  id: 56,
+  name: "Rekha Gupta",
+  skill: "House Cleaner",
+  experience: 5,
+  rating: 4.4,
+  pricePerHour: 260,
+  city: "Noida",
+  image: "https://randomuser.me/api/portraits/women/66.jpg"
+}
+
 ];

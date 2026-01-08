@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 const OurServices = [
   {
     id: 1,
@@ -25,9 +28,9 @@ const OurServices = [
 
 const Services = () => {
   return (
-     <section className="max-w-7xl mx-auto py-16 px-6">
-        <div >
-          <h1 className="font-bold text-amber-950"> Services we provide</h1>
+     <section className="w-full py-20 bg-linear-to-r from-cyan-100 to-zinc-300 shadow-2xl">
+        <div className="text-center mb-14" >
+          <h1 className="text-5xl font-bold text-amber-700"> Our Services</h1>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-y-20 gap-x-10">
@@ -50,9 +53,9 @@ const Services = () => {
                 <div>
                   <h2 className="text-2xl font-bold mb-3">{item.title}</h2>
                   <p className="text-gray-600 mb-4">{item.desc}</p>
-                  <button className="px-5 py-2 bg-blue-600 text-white rounded-md">
+                <Link to="/services/our-workers">  <button className="px-5 py-2 bg-blue-600 text-white rounded-md">
                     View Helpers
-                  </button>
+                  </button></Link>
                 </div>
               </div>
             </div>

@@ -11,7 +11,7 @@ const Home = () => {
     <div className="bg-linear-to-r from-cyan-100 to-zinc-300 shadow-2xl">
     <Hero/>
       <WeDo/>
-      <OurServices/>
+      <OurServices />
     </div>
   );
 };
