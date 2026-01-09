@@ -11,21 +11,25 @@ const filteredWorkers = selectedSkill
 
  console.log(filteredWorkers)
   return (
-    <div className="py-10 px-10 flex flex-wrap gap-11 ">
+    <div className="py-6 px-4 sm:px-8 lg:px-10 
+                grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
       {" "}
       {filteredWorkers.map((worker) => {
         return (
-          <div key={worker.id} className="w-50 h-100 border-2 rounded-xl overflow-hidden border-transparent  hover:border-gray-400 cursor-pointer ">
-            <div className="h-6/12 border-b-4">
+          <div key={worker.id} className="w-full max-w-sm mx-auto
+             border-2 rounded-xl overflow-hidden border-transparent
+             hover:border-gray-400 cursor-pointer
+             transition-all">
+            <div className="h-48 sm:h-52 border-b-4">
               <img
-                className="w-full h-full "
+                className="w-full h-full object-cover"
                 src={worker.image}
                 alt=""
               />
             </div>
-            <div className=" h-6/12 bg-linear-to-r from-cyan-600 to-90% to-gray-700 px-1">
-              <h1 className="text-lg font-bold"> {worker.name}</h1>
-              <div className="text-gray-300  ">
+            <div className=" bg-linear-to-r from-cyan-600 to-90% to-gray-700 px-3 py-3">
+              <h1 className="text-base sm:text-lg font-bold "> {worker.name}</h1>
+              <div className="text-gray-300 text-sm sm:text-base  ">
                 <h2>
                   {" "}
                   <span className="mr-12">Skill :</span>{worker.skill}
@@ -44,7 +48,10 @@ const filteredWorkers = selectedSkill
                 </p>
               </div>
               <div className="flex justify-center mt-4">
-                <button className="bg-green-600 rounded font-extrabold w-30 text-xl text-amber-900 hover:text-gray-300 hover:bg-orange-900">
+<button className="bg-green-600 rounded font-bold
+                   w-full sm:w-32
+                   py-2 text-base sm:text-lg
+                   text-amber-900 hover:text-gray-300 hover:bg-orange-900">
                   Hire Me
                 </button>
               </div>

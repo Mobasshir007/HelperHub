@@ -77,24 +77,29 @@ const ServicesCard = () => {
   ];
  
   return (
-    <div className="grid grid-cols-4   ">
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {CardData.map((card) => {
         return (
         <Link to="/our-workers" state={{ skill: card.skill }}>
-          <div  
-            className="w-60 h-60 m-4 rounded-lg cursor-pointer border-4 border-transparent hover:border-gray-400  overflow-hidden hover:-translate-y-2
-  shadow-sm
-hover:shadow-xl
-transition-shadow duration-300"
-          >
-            <div className="w-full  h-40 ">
-              <img className="h-40 w-full" src={card.img} alt={card.alt} />
-            </div>
+         <div  
+  className="w-full rounded-lg cursor-pointer
+             border-2 border-transparent hover:border-gray-400
+             overflow-hidden hover:-translate-y-2
+             shadow-sm hover:shadow-xl
+             transition-all duration-300"
+>
+
+           <div className="w-full h-40 sm:h-44 md:h-48">
+  <img className="w-full h-full object-cover" src={card.img} />
+</div>
+
             <div className="bg-linear-to-r from-green-300  to-orange-200">
-              <h1 className="text-gray-300 font-bold bg-cyan-600 rounded">
+<h1 className="text-sm sm:text-base font-bold bg-cyan-600 rounded px-2 py-1">
                 {card.label}
               </h1>
-              <p className=" font-serif text-neutral-700 h-16">{card.desc}</p>
+<p className="font-serif text-neutral-700 text-sm sm:text-base min-h-[4rem]">
+  {card.desc}
+</p>
             </div>
             
           </div></Link>
