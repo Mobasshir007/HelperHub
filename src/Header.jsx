@@ -1,73 +1,122 @@
 import React, { useState } from "react";
-import logo from "./assets/banner5.png";
 import { Link } from "react-router-dom";
+import logo from "./assets/banner5.png";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  
   return (
-    <div
-      className="w-full h-auto md:h-28
-                text-white shadow-xl shadow-cyan-100
-                bg-linear-to-r from-cyan-400 to-gray-200
-                flex flex-col md:flex-row
-                md:justify-between md:items-center px-4 "
-    >
-      <div>
-        <img className="w-40 sm:w-52 md:w-80 rounded-sm" src={logo} alt="" />
-      </div>
-      <div
-        className="flex justify-center items-center
-                py-4 md:py-2 px-2 w-full"
-      >
-        {" "}
-        <ul className="hidden md:flex gap-6 ">
-          <Link to="/">
-            {" "}
-            <li className="ul-item">Home</li>
-          </Link>{" "}
-          <Link to="/services">
-            {" "}
-            <li className="ul-item">Services</li>
-          </Link>
-          <Link to="/how-it-works">
-            <li className="ul-item">How it Works</li>
-          </Link>{" "}
-          <Link to="/about">
-            {" "}
-            <li className="ul-item">About </li>
-          </Link>
-          <Link to="/contact">
-            <li className="ul-item ">Contact</li>
-          </Link>{" "}
-        </ul>
-      </div>
-     <div className="flex items-center w-full md:w-auto justify-between md:justify-end gap-4">
+    <div className="w-full bg-gradient-to-r from-cyan-400 to-gray-200 shadow-xl shadow-cyan-100">
+      {/* Main Header Container */}
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between px-4 py-4 md:py-0 md:h-28">
+        
+        {/* Logo and Mobile Controls Row */}
+        <div className="flex items-center justify-between w-full md:w-auto">
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <img 
+              className="w-32 sm:w-40 md:w-64 lg:w-80 rounded-sm" 
+              src={logo} 
+              alt="Company Logo" 
+            />
+          </div>
 
-  {/* HAMBURGER ICON (MOBILE ONLY) */}
-  <button
-    className="md:hidden text-3xl text-gray-800"
-    onClick={() => setMenuOpen(!menuOpen)}
-  >
-    ☰
-  </button>
+          {/* Mobile Menu Toggle & Login Button */}
+          <div className="flex items-center gap-3 md:hidden">
+            <button className="bg-green-800 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-green-700 transition-colors">
+              Log in
+            </button>
+            <button
+              className="text-3xl text-gray-800 hover:text-gray-600 transition-colors"
+              onClick={() => setMenuOpen(!menuOpen)}
+              aria-label="Toggle menu"
+            >
+              {menuOpen ? '✕' : '☰'}
+            </button>
+          </div>
+        </div>
 
-  <button className="bg-green-800 w-full md:w-20 h-9 rounded-md text-sm font-medium">
-    Log in
-  </button>
-</div>
-{menuOpen && (
-  <div className="md:hidden bg-cyan-300 px-6 py-4">
-    <ul className="flex flex-col gap-4 text-gray-900 font-medium">
-      <Link to="/" onClick={() => setMenuOpen(false)}>Home</Link>
-      <Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link>
-      <Link to="/how-it-works" onClick={() => setMenuOpen(false)}>How it Works</Link>
-      <Link to="/about" onClick={() => setMenuOpen(false)}>About</Link>
-      <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
-    </ul>
-  </div>
-)}
+        {/* Desktop Navigation */}
+        <nav className="hidden md:flex items-center gap-8 lg:gap-10">
+          <ul className="flex gap-6 lg:gap-8 text-white">
+            <Link to="/">
+              <li className="hover:text-gray-800 transition-colors cursor-pointer font-medium">
+                Home
+              </li>
+            </Link>
+            <Link to="/services">
+              <li className="hover:text-gray-800 transition-colors cursor-pointer font-medium">
+                Services
+              </li>
+            </Link>
+            <Link to="/how-it-works">
+              <li className="hover:text-gray-800 transition-colors cursor-pointer font-medium">
+                How it Works
+              </li>
+            </Link>
+            <Link to="/about">
+              <li className="hover:text-gray-800 transition-colors cursor-pointer font-medium">
+                About
+              </li>
+            </Link>
+            <Link to="/contact">
+              <li className="hover:text-gray-800 transition-colors cursor-pointer font-medium">
+                Contact
+              </li>
+            </Link>
+          </ul>
+          
+          <button className="bg-green-800 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-green-700 transition-colors whitespace-nowrap">
+            Log in
+          </button>
+        </nav>
+      </div>
+
+      {/* Mobile Menu Dropdown */}
+      {menuOpen && (
+        <div className="md:hidden bg-cyan-300 border-t border-cyan-400">
+          <nav className="px-6 py-4">
+            <ul className="flex flex-col gap-4">
+              <Link 
+                to="/" 
+                onClick={() => setMenuOpen(false)}
+                className="text-gray-900 font-medium hover:text-gray-600 transition-colors py-2"
+              >
+                Home
+              </Link>
+              <Link 
+                to="/services" 
+                onClick={() => setMenuOpen(false)}
+                className="text-gray-900 font-medium hover:text-gray-600 transition-colors py-2"
+              >
+                Services
+              </Link>
+              <Link 
+                to="/how-it-works" 
+                onClick={() => setMenuOpen(false)}
+                className="text-gray-900 font-medium hover:text-gray-600 transition-colors py-2"
+              >
+                How it Works
+              </Link>
+              <Link 
+                to="/about" 
+                onClick={() => setMenuOpen(false)}
+                className="text-gray-900 font-medium hover:text-gray-600 transition-colors py-2"
+              >
+                About
+              </Link>
+              <Link 
+                to="/contact" 
+                onClick={() => setMenuOpen(false)}
+                className="text-gray-900 font-medium hover:text-gray-600 transition-colors py-2"
+              >
+                Contact
+              </Link>
+            </ul>
+          </nav>
+        </div>
+      )}
     </div>
-    
   );
 };
 
