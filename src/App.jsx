@@ -6,6 +6,7 @@ import Services from "./Components/Services";
 import About from "./Components/About";
 import Contact from "./Components/Contact";
 import HowItWorks from "./Components/HowItWorks";
+import LoginPage from './Components/HomeComponents/LoginPage'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Workerlist from "./Components/ViewWorker/Workerlist";
 
@@ -31,6 +32,7 @@ function App() {
         {path:"/about",element:<About/>},
         {path:"/contact",element:<Contact/>},
         {path:"/how-it-works",element:<HowItWorks/>},
+        {path:"/LoginPage",element:<LoginPage/>}
         
       ],
     },

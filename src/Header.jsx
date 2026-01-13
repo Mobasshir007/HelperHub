@@ -69,9 +69,9 @@ const Header = () => {
             </Link>
           </ul>
 
-          <button onClick={()=>setIsLoggedIn(prev=>!prev)}  className="bg-green-800 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-green-700 transition-colors whitespace-nowrap">
+        <Link to=""> <button onClick={()=>setIsLoggedIn(prev=>!prev)}  className="bg-green-800 text-white px-6 py-2 rounded-md text-sm font-medium hover:bg-green-700 transition-colors whitespace-nowrap">
             {isLoggedIn ? "Log In" : "Log Out"}
-          </button>
+          </button> </Link> 
         </nav>
       </div>
 
